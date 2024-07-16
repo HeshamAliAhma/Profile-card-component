@@ -16,55 +16,69 @@
       font-size: 14px;
       text-align: center;
     }
-
     .attribution a {
       color: hsl(228, 45%, 44%);
+    }
+    main::after,
+    main::before{
+      content: "";
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 700px;
+      height: 700px;
+      position: absolute;
+    }
+    main::before{
+      background-image: url('./images/bg-pattern-bottom.svg');
+      right: -250px;
+      bottom: -250px;
+    }
+    main::after{
+      background-image: url('./images/bg-pattern-top.svg');
+      left: -250px;
+      top: -250px;
     }
   </style>
 </head>
 
-<body class="bg-darkCyan">
+<body class="bg-darkCyan overflow-hidden relative">
 
 
-  <div class="background-image z-0">
-    <img class="img-bottom absolute bottom-[-400px] right-[-400px] z-0" src="./images/bg-pattern-bottom.svg" alt="">
-    <img class="img-top absolute left-[-400px] top-[-400px] z-0" src="./images/bg-pattern-top.svg" alt="">
-  </div>
 
-
-  <div class="flex items-center flex-col justify-center w-[100%] h-[100vh]">
-    <div
-      class="max-w-2xl z-10 mb-2 mx-4 sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto mt-16 bg-white shadow-xl rounded-lg text-gray-900">
-      <div class="rounded-t-lg h-32 overflow-hidden">
-        <img class="object-cover object-top w-full" src='./images/bg-pattern-card.svg' alt='Mountain'>
-      </div>
-      <div class="mx-auto w-32 h-32 relative -mt-16 border-8 border-white rounded-full overflow-hidden">
-        <img class="object-cover object-center h-32" src='./images/image-victor.jpg' alt='Woman looking front'>
-      </div>
-      <div class="text-center my-5">
-        <h2 class="font-bold text-2xl">Victor Crest <span class="ml-1 font-normal text-gray-500">26</span></h2>
-        <p class="text-grayishBlue">London</p>
-      </div>
-      <ul class="py-4 mt-2 text-gray-700 flex items-center justify-around border-t border-x-darkCyan">
-        <li class="flex flex-col items-center justify-around">
-          <h1 class="font-bold text-2xl text-darkBlue">80K</h1>
-          <p class="text-darkGray text-sm">Followers</p>
-        </li>
-        <li class="flex flex-col items-center justify-between">
-          <h1 class="font-bold text-2xl text-darkBlue">803K</h1>
-          <p class="text-darkGray text-sm">Likes</p>
-        </li>
-        <li class="flex flex-col items-center justify-around">
-          <h1 class="font-bold text-2xl text-darkBlue">1.4K</h1>
-          <p class="text-sm text-darkGray">Photos</p>
-        </li>
-      </ul>
+<main class="flex relative items-center flex-col justify-center w-[100%] h-[100vh]">
+  <div
+    class="max-w-2xl z-10 mb-2 mx-4 sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto mt-16 bg-white shadow-xl rounded-lg text-gray-900">
+    <div class="rounded-t-lg h-32 overflow-hidden">
+      <img class="object-cover object-top w-full" src='./images/bg-pattern-card.svg' alt='Mountain'>
     </div>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Hesham Ali</a>.
+    <div class="mx-auto w-32 h-32 relative -mt-16 border-8 border-white rounded-full overflow-hidden">
+      <img class="object-cover object-center h-32" src='./images/image-victor.jpg' alt='Woman looking front'>
     </div>
+    <div class="text-center my-5">
+      <h2 class="font-bold text-2xl">Victor Crest <span class="ml-1 font-normal text-gray-500">26</span></h2>
+      <p class="text-grayishBlue">London</p>
+    </div>
+    <ul class="py-4 mt-2 text-gray-700 flex items-center justify-around border-t border-x-darkCyan">
+      <li class="flex flex-col items-center justify-around">
+        <h1 class="font-bold text-2xl text-darkBlue">80K</h1>
+        <p class="text-darkGray text-sm">Followers</p>
+      </li>
+      <li class="flex flex-col items-center justify-between">
+        <h1 class="font-bold text-2xl text-darkBlue">803K</h1>
+        <p class="text-darkGray text-sm">Likes</p>
+      </li>
+      <li class="flex flex-col items-center justify-around">
+        <h1 class="font-bold text-2xl text-darkBlue">1.4K</h1>
+        <p class="text-sm text-darkGray">Photos</p>
+      </li>
+    </ul>
   </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/HeshamAliAhma">Hesham Ali</a>.
+  </div>
+</main>
 
 </body>
 
